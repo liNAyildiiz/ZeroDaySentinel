@@ -140,3 +140,37 @@ Generated files:
 - `reports/summary.json`
 
 This demo uses only synthetic telemetry and non-weaponized defensive detection logic.
+
+## Architecture Overview
+
+ZeroDaySentinel is organized as a defensive detection lab. The current prototype follows a safe synthetic telemetry pipeline:
+
+Synthetic Event Generator
+→ sample_events.jsonl
+→ Defensive Detector
+→ Risk Scoring and Rule Matching
+→ alerts.json and summary.json
+
+The project intentionally avoids exploit development. It focuses on how defenders can reason about unknown or undisclosed threats using telemetry, detection logic, response playbooks, and responsible disclosure workflows.
+
+See `docs/architecture.md` for more details.
+
+## Demo Output
+
+The current local demo analyzes synthetic events and produces defensive alerts.
+
+Example result from the v0.2 prototype:
+
+- Generated events: 120
+- Events analyzed: 120
+- Alerts generated: 25
+- Output files: `reports/alerts.json` and `reports/summary.json`
+
+See `docs/demo-output.md` for more details.
+
+## Why Star This Project?
+
+ZeroDaySentinel is designed as a clean, ethical, and reproducible defensive security project. It is useful for people interested in detection engineering, blue-team research, threat hunting, incident response, responsible disclosure, safe zero-day readiness modeling, and synthetic telemetry experiments.
+
+The project does not rely on fake benchmark claims. Metrics and performance results will be added only when reproducible experiments are implemented.
+
