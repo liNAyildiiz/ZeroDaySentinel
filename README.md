@@ -174,3 +174,19 @@ ZeroDaySentinel is designed as a clean, ethical, and reproducible defensive secu
 
 The project does not rely on fake benchmark claims. Metrics and performance results will be added only when reproducible experiments are implemented.
 
+
+## Command-Line Usage
+
+ZeroDaySentinel can also be run through a small local CLI entry point:
+
+```powershell
+python sentinel.py --demo
+```
+
+To print the latest generated summary:
+
+```powershell
+python sentinel.py --summary
+```
+
+See `docs/cli.md` for more details.

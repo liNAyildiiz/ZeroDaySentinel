@@ -1,7 +1,7 @@
 [
   {
-    "alert_id": "alert-b4946e38-2690-43f7-8b8a-36dafb4252e6",
-    "event_id": "b4946e38-2690-43f7-8b8a-36dafb4252e6",
+    "alert_id": "alert-35488ea1-0df8-476c-98df-861d5b6f17d1",
+    "event_id": "35488ea1-0df8-476c-98df-861d5b6f17d1",
     "timestamp": "2026-05-06T18:01:00+00:00",
     "host": "build-runner-01",
     "user": "david.ops",
@@ -20,8 +20,8 @@
     "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
   },
   {
-    "alert_id": "alert-579a61ff-a760-418f-9a7c-9f2e3d10307c",
-    "event_id": "579a61ff-a760-418f-9a7c-9f2e3d10307c",
+    "alert_id": "alert-3a3f98b6-aa70-4a18-be51-215b329616d4",
+    "event_id": "3a3f98b6-aa70-4a18-be51-215b329616d4",
     "timestamp": "2026-05-06T18:02:00+00:00",
     "host": "win-endpoint-01",
     "user": "service.backup",
@@ -40,8 +40,8 @@
     "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
   },
   {
-    "alert_id": "alert-4f7b1677-7f8c-4630-8abd-7ba35a91c130",
-    "event_id": "4f7b1677-7f8c-4630-8abd-7ba35a91c130",
+    "alert_id": "alert-eb0099f9-b647-4845-8e6f-45db302db61d",
+    "event_id": "eb0099f9-b647-4845-8e6f-45db302db61d",
     "timestamp": "2026-05-06T18:03:00+00:00",
     "host": "db-gateway-01",
     "user": "service.backup",
@@ -60,8 +60,8 @@
     "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
   },
   {
-    "alert_id": "alert-1609846a-b9dc-455d-8cb7-e15fb5b54e2f",
-    "event_id": "1609846a-b9dc-455d-8cb7-e15fb5b54e2f",
+    "alert_id": "alert-b140c171-1c3d-4bf6-b8f8-bcd326170a3e",
+    "event_id": "b140c171-1c3d-4bf6-b8f8-bcd326170a3e",
     "timestamp": "2026-05-06T18:11:00+00:00",
     "host": "build-runner-01",
     "user": "bob.admin",
@@ -80,8 +80,8 @@
     "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
   },
   {
-    "alert_id": "alert-91fe9d84-649c-4bcf-a9eb-769a0250636b",
-    "event_id": "91fe9d84-649c-4bcf-a9eb-769a0250636b",
+    "alert_id": "alert-2a747db3-a999-468b-950d-08dff6e4e5e2",
+    "event_id": "2a747db3-a999-468b-950d-08dff6e4e5e2",
     "timestamp": "2026-05-06T18:25:00+00:00",
     "host": "win-endpoint-01",
     "user": "service.backup",
@@ -100,8 +100,8 @@
     "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
   },
   {
-    "alert_id": "alert-44ad1641-1007-4109-82be-1b18c8334126",
-    "event_id": "44ad1641-1007-4109-82be-1b18c8334126",
+    "alert_id": "alert-6669e597-70af-4c39-b64a-ce102dcd4baf",
+    "event_id": "6669e597-70af-4c39-b64a-ce102dcd4baf",
     "timestamp": "2026-05-06T18:27:00+00:00",
     "host": "build-runner-01",
     "user": "bob.admin",
@@ -120,8 +120,8 @@
     "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
   },
   {
-    "alert_id": "alert-7e2566bd-9def-4915-8019-e4aa29d0037b",
-    "event_id": "7e2566bd-9def-4915-8019-e4aa29d0037b",
+    "alert_id": "alert-5a09290b-d470-4261-8b45-e46b31e1d8cd",
+    "event_id": "5a09290b-d470-4261-8b45-e46b31e1d8cd",
     "timestamp": "2026-05-06T18:28:00+00:00",
     "host": "build-runner-01",
     "user": "david.ops",
@@ -140,8 +140,8 @@
     "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
   },
   {
-    "alert_id": "alert-9be0fd62-4f47-4db8-8b0c-f79de2bc3d77",
-    "event_id": "9be0fd62-4f47-4db8-8b0c-f79de2bc3d77",
+    "alert_id": "alert-5c7ef968-3738-428b-9dc3-446c4aa6a254",
+    "event_id": "5c7ef968-3738-428b-9dc3-446c4aa6a254",
     "timestamp": "2026-05-06T18:31:00+00:00",
     "host": "build-runner-01",
     "user": "bob.admin",
@@ -160,8 +160,8 @@
     "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
   },
   {
-    "alert_id": "alert-b39bee25-1d3b-4c3c-84f6-59393432fbf2",
-    "event_id": "b39bee25-1d3b-4c3c-84f6-59393432fbf2",
+    "alert_id": "alert-ae5a7e68-c415-4667-ba50-da392b9f5805",
+    "event_id": "ae5a7e68-c415-4667-ba50-da392b9f5805",
     "timestamp": "2026-05-06T18:46:00+00:00",
     "host": "win-endpoint-01",
     "user": "service.backup",
@@ -180,8 +180,8 @@
     "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
   },
   {
-    "alert_id": "alert-5ed3041f-9146-4a20-b2f7-65d8428d9817",
-    "event_id": "5ed3041f-9146-4a20-b2f7-65d8428d9817",
+    "alert_id": "alert-5954493b-132f-49d9-8e8b-d71973bc56d2",
+    "event_id": "5954493b-132f-49d9-8e8b-d71973bc56d2",
     "timestamp": "2026-05-06T18:47:00+00:00",
     "host": "db-gateway-01",
     "user": "alice.research",
@@ -200,8 +200,8 @@
     "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
   },
   {
-    "alert_id": "alert-eafcd302-49dc-4d7a-9ab9-2325abf6f705",
-    "event_id": "eafcd302-49dc-4d7a-9ab9-2325abf6f705",
+    "alert_id": "alert-1aa26f81-a712-4cfb-8224-e15e02bf7a74",
+    "event_id": "1aa26f81-a712-4cfb-8224-e15e02bf7a74",
     "timestamp": "2026-05-06T18:54:00+00:00",
     "host": "linux-api-02",
     "user": "david.ops",
@@ -220,8 +220,8 @@
     "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
   },
   {
-    "alert_id": "alert-5c7f0dca-be98-4771-9a39-2fb9ba302550",
-    "event_id": "5c7f0dca-be98-4771-9a39-2fb9ba302550",
+    "alert_id": "alert-a7abe9c8-d493-4010-ac95-6fe1ec354613",
+    "event_id": "a7abe9c8-d493-4010-ac95-6fe1ec354613",
     "timestamp": "2026-05-06T18:57:00+00:00",
     "host": "k8s-node-03",
     "user": "service.backup",
@@ -240,8 +240,8 @@
     "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
   },
   {
-    "alert_id": "alert-e0a8dbc0-fdac-49fa-8cc7-324e58c30c4f",
-    "event_id": "e0a8dbc0-fdac-49fa-8cc7-324e58c30c4f",
+    "alert_id": "alert-c9443a6b-168d-441f-991e-fef9564f431d",
+    "event_id": "c9443a6b-168d-441f-991e-fef9564f431d",
     "timestamp": "2026-05-06T18:58:00+00:00",
     "host": "build-runner-01",
     "user": "david.ops",
@@ -260,8 +260,8 @@
     "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
   },
   {
-    "alert_id": "alert-51f158cf-ce67-4722-bab6-4265e1daae00",
-    "event_id": "51f158cf-ce67-4722-bab6-4265e1daae00",
+    "alert_id": "alert-d04c9834-972a-4bf3-9149-a08d8e0a66ae",
+    "event_id": "d04c9834-972a-4bf3-9149-a08d8e0a66ae",
     "timestamp": "2026-05-06T19:00:00+00:00",
     "host": "build-runner-01",
     "user": "david.ops",
@@ -280,8 +280,8 @@
     "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
   },
   {
-    "alert_id": "alert-d7790341-d51f-4aca-9e70-6a0a79f30cee",
-    "event_id": "d7790341-d51f-4aca-9e70-6a0a79f30cee",
+    "alert_id": "alert-9108c228-a7c8-40c2-bbbd-cc4e80f54438",
+    "event_id": "9108c228-a7c8-40c2-bbbd-cc4e80f54438",
     "timestamp": "2026-05-06T19:03:00+00:00",
     "host": "win-endpoint-01",
     "user": "carol.engineering",
@@ -300,8 +300,8 @@
     "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
   },
   {
-    "alert_id": "alert-b6de015c-a7df-4cbb-9cc3-9be00bec1be0",
-    "event_id": "b6de015c-a7df-4cbb-9cc3-9be00bec1be0",
+    "alert_id": "alert-679e096c-6120-46fb-91fc-702e0d77662f",
+    "event_id": "679e096c-6120-46fb-91fc-702e0d77662f",
     "timestamp": "2026-05-06T19:08:00+00:00",
     "host": "win-endpoint-01",
     "user": "bob.admin",
@@ -320,8 +320,8 @@
     "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
   },
   {
-    "alert_id": "alert-6d74f3c2-b5ad-4f8c-a841-59b52b3a1b02",
-    "event_id": "6d74f3c2-b5ad-4f8c-a841-59b52b3a1b02",
+    "alert_id": "alert-5c4991bd-0e9b-473c-bd8e-6928c8fc0484",
+    "event_id": "5c4991bd-0e9b-473c-bd8e-6928c8fc0484",
     "timestamp": "2026-05-06T19:11:00+00:00",
     "host": "k8s-node-03",
     "user": "carol.engineering",
@@ -340,8 +340,8 @@
     "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
   },
   {
-    "alert_id": "alert-e380a5c3-6cd7-4cea-a177-003a16bb462c",
-    "event_id": "e380a5c3-6cd7-4cea-a177-003a16bb462c",
+    "alert_id": "alert-862b4785-f64f-4dc2-aef8-e88d2f54c991",
+    "event_id": "862b4785-f64f-4dc2-aef8-e88d2f54c991",
     "timestamp": "2026-05-06T19:15:00+00:00",
     "host": "k8s-node-03",
     "user": "service.backup",
@@ -360,8 +360,8 @@
     "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
   },
   {
-    "alert_id": "alert-15b97c12-c86a-4054-9e77-eceb09f8a48a",
-    "event_id": "15b97c12-c86a-4054-9e77-eceb09f8a48a",
+    "alert_id": "alert-b629534d-d415-42d9-98f6-668668400eb6",
+    "event_id": "b629534d-d415-42d9-98f6-668668400eb6",
     "timestamp": "2026-05-06T19:17:00+00:00",
     "host": "build-runner-01",
     "user": "carol.engineering",
@@ -380,8 +380,8 @@
     "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
   },
   {
-    "alert_id": "alert-2185a40f-f273-4db3-bd69-63c2cc8169a3",
-    "event_id": "2185a40f-f273-4db3-bd69-63c2cc8169a3",
+    "alert_id": "alert-635c21b2-552e-411d-9e8a-65e06b57093c",
+    "event_id": "635c21b2-552e-411d-9e8a-65e06b57093c",
     "timestamp": "2026-05-06T19:23:00+00:00",
     "host": "db-gateway-01",
     "user": "david.ops",
@@ -400,8 +400,8 @@
     "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
   },
   {
-    "alert_id": "alert-c3daa417-6276-4bf9-be69-b13003aff79f",
-    "event_id": "c3daa417-6276-4bf9-be69-b13003aff79f",
+    "alert_id": "alert-39cbb241-6414-4331-b384-e0dc6e11bf19",
+    "event_id": "39cbb241-6414-4331-b384-e0dc6e11bf19",
     "timestamp": "2026-05-06T19:26:00+00:00",
     "host": "linux-api-02",
     "user": "alice.research",
@@ -420,8 +420,8 @@
     "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
   },
   {
-    "alert_id": "alert-23926f4d-24c5-4189-bc1d-3e3146bb1fa8",
-    "event_id": "23926f4d-24c5-4189-bc1d-3e3146bb1fa8",
+    "alert_id": "alert-c15680c6-74ec-4c72-b649-ae98c619f13d",
+    "event_id": "c15680c6-74ec-4c72-b649-ae98c619f13d",
     "timestamp": "2026-05-06T19:38:00+00:00",
     "host": "db-gateway-01",
     "user": "bob.admin",
@@ -440,8 +440,8 @@
     "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
   },
   {
-    "alert_id": "alert-6c3fc6bd-e10b-4253-8a23-2610d287b023",
-    "event_id": "6c3fc6bd-e10b-4253-8a23-2610d287b023",
+    "alert_id": "alert-745a4720-e77a-4a56-a569-4f041de995c8",
+    "event_id": "745a4720-e77a-4a56-a569-4f041de995c8",
     "timestamp": "2026-05-06T19:42:00+00:00",
     "host": "k8s-node-03",
     "user": "alice.research",
@@ -460,8 +460,8 @@
     "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
   },
   {
-    "alert_id": "alert-40ed35c1-12e3-4dff-9cdf-56a4f1c85e29",
-    "event_id": "40ed35c1-12e3-4dff-9cdf-56a4f1c85e29",
+    "alert_id": "alert-8ca72f7b-107b-484f-8c41-5e834a405556",
+    "event_id": "8ca72f7b-107b-484f-8c41-5e834a405556",
     "timestamp": "2026-05-06T19:47:00+00:00",
     "host": "k8s-node-03",
     "user": "alice.research",
@@ -480,8 +480,8 @@
     "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
   },
   {
-    "alert_id": "alert-ee60e88d-b91b-4fdb-b6c4-56ead65905b9",
-    "event_id": "ee60e88d-b91b-4fdb-b6c4-56ead65905b9",
+    "alert_id": "alert-871d67d6-a9f6-42e2-aa7d-14953d9ee8c6",
+    "event_id": "871d67d6-a9f6-42e2-aa7d-14953d9ee8c6",
     "timestamp": "2026-05-06T19:49:00+00:00",
     "host": "build-runner-01",
     "user": "alice.research",
