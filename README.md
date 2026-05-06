@@ -115,3 +115,28 @@ This project is intended only for defensive education, authorized research, and 
 - anomaly timeline
 - rule hit visualization
 - reproducible demo screenshots
+
+## Quick Start
+
+Run the first safe local demo:
+
+```powershell
+python lab/log-generator/generate_logs.py
+python lab/detector/detector.py
+```
+
+Expected output:
+
+```text
+[ZeroDaySentinel] Generated synthetic events.
+[ZeroDaySentinel] Detection completed.
+[ZeroDaySentinel] Alerts generated.
+```
+
+Generated files:
+
+- `lab/sample-logs/sample_events.jsonl`
+- `reports/alerts.json`
+- `reports/summary.json`
+
+This demo uses only synthetic telemetry and non-weaponized defensive detection logic.

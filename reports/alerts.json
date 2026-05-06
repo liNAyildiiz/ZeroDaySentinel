@@ -1,0 +1,502 @@
+[
+  {
+    "alert_id": "alert-b4946e38-2690-43f7-8b8a-36dafb4252e6",
+    "event_id": "b4946e38-2690-43f7-8b8a-36dafb4252e6",
+    "timestamp": "2026-05-06T18:01:00+00:00",
+    "host": "build-runner-01",
+    "user": "david.ops",
+    "source": "web-api",
+    "event_type": "auth_failure_burst",
+    "risk_score": 100,
+    "priority": "critical",
+    "matched_rules": [
+      {
+        "rule_id": "ZDS-001",
+        "name": "Authentication Anomaly Burst",
+        "description": "Detects synthetic bursts of failed authentication behavior."
+      }
+    ],
+    "recommended_action": "triage_required",
+    "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
+  },
+  {
+    "alert_id": "alert-579a61ff-a760-418f-9a7c-9f2e3d10307c",
+    "event_id": "579a61ff-a760-418f-9a7c-9f2e3d10307c",
+    "timestamp": "2026-05-06T18:02:00+00:00",
+    "host": "win-endpoint-01",
+    "user": "service.backup",
+    "source": "network-sensor-sim",
+    "event_type": "auth_failure_burst",
+    "risk_score": 100,
+    "priority": "critical",
+    "matched_rules": [
+      {
+        "rule_id": "ZDS-001",
+        "name": "Authentication Anomaly Burst",
+        "description": "Detects synthetic bursts of failed authentication behavior."
+      }
+    ],
+    "recommended_action": "triage_required",
+    "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
+  },
+  {
+    "alert_id": "alert-4f7b1677-7f8c-4630-8abd-7ba35a91c130",
+    "event_id": "4f7b1677-7f8c-4630-8abd-7ba35a91c130",
+    "timestamp": "2026-05-06T18:03:00+00:00",
+    "host": "db-gateway-01",
+    "user": "service.backup",
+    "source": "auth-service",
+    "event_type": "abnormal_api_frequency",
+    "risk_score": 100,
+    "priority": "critical",
+    "matched_rules": [
+      {
+        "rule_id": "ZDS-006",
+        "name": "Abnormal API Frequency",
+        "description": "Detects synthetic high-frequency API behavior."
+      }
+    ],
+    "recommended_action": "triage_required",
+    "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
+  },
+  {
+    "alert_id": "alert-1609846a-b9dc-455d-8cb7-e15fb5b54e2f",
+    "event_id": "1609846a-b9dc-455d-8cb7-e15fb5b54e2f",
+    "timestamp": "2026-05-06T18:11:00+00:00",
+    "host": "build-runner-01",
+    "user": "bob.admin",
+    "source": "web-api",
+    "event_type": "unusual_outbound_pattern",
+    "risk_score": 100,
+    "priority": "critical",
+    "matched_rules": [
+      {
+        "rule_id": "ZDS-003",
+        "name": "Unusual Outbound Pattern",
+        "description": "Detects synthetic rare outbound communication behavior."
+      }
+    ],
+    "recommended_action": "triage_required",
+    "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
+  },
+  {
+    "alert_id": "alert-91fe9d84-649c-4bcf-a9eb-769a0250636b",
+    "event_id": "91fe9d84-649c-4bcf-a9eb-769a0250636b",
+    "timestamp": "2026-05-06T18:25:00+00:00",
+    "host": "win-endpoint-01",
+    "user": "service.backup",
+    "source": "network-sensor-sim",
+    "event_type": "unusual_outbound_pattern",
+    "risk_score": 100,
+    "priority": "critical",
+    "matched_rules": [
+      {
+        "rule_id": "ZDS-003",
+        "name": "Unusual Outbound Pattern",
+        "description": "Detects synthetic rare outbound communication behavior."
+      }
+    ],
+    "recommended_action": "triage_required",
+    "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
+  },
+  {
+    "alert_id": "alert-44ad1641-1007-4109-82be-1b18c8334126",
+    "event_id": "44ad1641-1007-4109-82be-1b18c8334126",
+    "timestamp": "2026-05-06T18:27:00+00:00",
+    "host": "build-runner-01",
+    "user": "bob.admin",
+    "source": "web-api",
+    "event_type": "rare_admin_action",
+    "risk_score": 100,
+    "priority": "critical",
+    "matched_rules": [
+      {
+        "rule_id": "ZDS-005",
+        "name": "Rare Privileged Operation",
+        "description": "Detects synthetic rare administrative activity."
+      }
+    ],
+    "recommended_action": "triage_required",
+    "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
+  },
+  {
+    "alert_id": "alert-7e2566bd-9def-4915-8019-e4aa29d0037b",
+    "event_id": "7e2566bd-9def-4915-8019-e4aa29d0037b",
+    "timestamp": "2026-05-06T18:28:00+00:00",
+    "host": "build-runner-01",
+    "user": "david.ops",
+    "source": "network-sensor-sim",
+    "event_type": "sensitive_file_access_pattern",
+    "risk_score": 96,
+    "priority": "critical",
+    "matched_rules": [
+      {
+        "rule_id": "ZDS-004",
+        "name": "Sensitive Access Pattern",
+        "description": "Detects synthetic access behavior involving sensitive areas."
+      }
+    ],
+    "recommended_action": "triage_required",
+    "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
+  },
+  {
+    "alert_id": "alert-9be0fd62-4f47-4db8-8b0c-f79de2bc3d77",
+    "event_id": "9be0fd62-4f47-4db8-8b0c-f79de2bc3d77",
+    "timestamp": "2026-05-06T18:31:00+00:00",
+    "host": "build-runner-01",
+    "user": "bob.admin",
+    "source": "network-sensor-sim",
+    "event_type": "unexpected_child_process",
+    "risk_score": 91,
+    "priority": "critical",
+    "matched_rules": [
+      {
+        "rule_id": "ZDS-002",
+        "name": "Unexpected Execution Context",
+        "description": "Detects synthetic process-tree behavior that deviates from normal baselines."
+      }
+    ],
+    "recommended_action": "triage_required",
+    "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
+  },
+  {
+    "alert_id": "alert-b39bee25-1d3b-4c3c-84f6-59393432fbf2",
+    "event_id": "b39bee25-1d3b-4c3c-84f6-59393432fbf2",
+    "timestamp": "2026-05-06T18:46:00+00:00",
+    "host": "win-endpoint-01",
+    "user": "service.backup",
+    "source": "auth-service",
+    "event_type": "rare_admin_action",
+    "risk_score": 100,
+    "priority": "critical",
+    "matched_rules": [
+      {
+        "rule_id": "ZDS-005",
+        "name": "Rare Privileged Operation",
+        "description": "Detects synthetic rare administrative activity."
+      }
+    ],
+    "recommended_action": "triage_required",
+    "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
+  },
+  {
+    "alert_id": "alert-5ed3041f-9146-4a20-b2f7-65d8428d9817",
+    "event_id": "5ed3041f-9146-4a20-b2f7-65d8428d9817",
+    "timestamp": "2026-05-06T18:47:00+00:00",
+    "host": "db-gateway-01",
+    "user": "alice.research",
+    "source": "auth-service",
+    "event_type": "unexpected_child_process",
+    "risk_score": 94,
+    "priority": "critical",
+    "matched_rules": [
+      {
+        "rule_id": "ZDS-002",
+        "name": "Unexpected Execution Context",
+        "description": "Detects synthetic process-tree behavior that deviates from normal baselines."
+      }
+    ],
+    "recommended_action": "triage_required",
+    "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
+  },
+  {
+    "alert_id": "alert-eafcd302-49dc-4d7a-9ab9-2325abf6f705",
+    "event_id": "eafcd302-49dc-4d7a-9ab9-2325abf6f705",
+    "timestamp": "2026-05-06T18:54:00+00:00",
+    "host": "linux-api-02",
+    "user": "david.ops",
+    "source": "endpoint-agent",
+    "event_type": "unusual_outbound_pattern",
+    "risk_score": 100,
+    "priority": "critical",
+    "matched_rules": [
+      {
+        "rule_id": "ZDS-003",
+        "name": "Unusual Outbound Pattern",
+        "description": "Detects synthetic rare outbound communication behavior."
+      }
+    ],
+    "recommended_action": "triage_required",
+    "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
+  },
+  {
+    "alert_id": "alert-5c7f0dca-be98-4771-9a39-2fb9ba302550",
+    "event_id": "5c7f0dca-be98-4771-9a39-2fb9ba302550",
+    "timestamp": "2026-05-06T18:57:00+00:00",
+    "host": "k8s-node-03",
+    "user": "service.backup",
+    "source": "endpoint-agent",
+    "event_type": "auth_failure_burst",
+    "risk_score": 94,
+    "priority": "critical",
+    "matched_rules": [
+      {
+        "rule_id": "ZDS-001",
+        "name": "Authentication Anomaly Burst",
+        "description": "Detects synthetic bursts of failed authentication behavior."
+      }
+    ],
+    "recommended_action": "triage_required",
+    "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
+  },
+  {
+    "alert_id": "alert-e0a8dbc0-fdac-49fa-8cc7-324e58c30c4f",
+    "event_id": "e0a8dbc0-fdac-49fa-8cc7-324e58c30c4f",
+    "timestamp": "2026-05-06T18:58:00+00:00",
+    "host": "build-runner-01",
+    "user": "david.ops",
+    "source": "endpoint-agent",
+    "event_type": "unusual_outbound_pattern",
+    "risk_score": 100,
+    "priority": "critical",
+    "matched_rules": [
+      {
+        "rule_id": "ZDS-003",
+        "name": "Unusual Outbound Pattern",
+        "description": "Detects synthetic rare outbound communication behavior."
+      }
+    ],
+    "recommended_action": "triage_required",
+    "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
+  },
+  {
+    "alert_id": "alert-51f158cf-ce67-4722-bab6-4265e1daae00",
+    "event_id": "51f158cf-ce67-4722-bab6-4265e1daae00",
+    "timestamp": "2026-05-06T19:00:00+00:00",
+    "host": "build-runner-01",
+    "user": "david.ops",
+    "source": "kernel-telemetry-sim",
+    "event_type": "unexpected_child_process",
+    "risk_score": 100,
+    "priority": "critical",
+    "matched_rules": [
+      {
+        "rule_id": "ZDS-002",
+        "name": "Unexpected Execution Context",
+        "description": "Detects synthetic process-tree behavior that deviates from normal baselines."
+      }
+    ],
+    "recommended_action": "triage_required",
+    "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
+  },
+  {
+    "alert_id": "alert-d7790341-d51f-4aca-9e70-6a0a79f30cee",
+    "event_id": "d7790341-d51f-4aca-9e70-6a0a79f30cee",
+    "timestamp": "2026-05-06T19:03:00+00:00",
+    "host": "win-endpoint-01",
+    "user": "carol.engineering",
+    "source": "auth-service",
+    "event_type": "unusual_outbound_pattern",
+    "risk_score": 98,
+    "priority": "critical",
+    "matched_rules": [
+      {
+        "rule_id": "ZDS-003",
+        "name": "Unusual Outbound Pattern",
+        "description": "Detects synthetic rare outbound communication behavior."
+      }
+    ],
+    "recommended_action": "triage_required",
+    "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
+  },
+  {
+    "alert_id": "alert-b6de015c-a7df-4cbb-9cc3-9be00bec1be0",
+    "event_id": "b6de015c-a7df-4cbb-9cc3-9be00bec1be0",
+    "timestamp": "2026-05-06T19:08:00+00:00",
+    "host": "win-endpoint-01",
+    "user": "bob.admin",
+    "source": "auth-service",
+    "event_type": "sensitive_file_access_pattern",
+    "risk_score": 94,
+    "priority": "critical",
+    "matched_rules": [
+      {
+        "rule_id": "ZDS-004",
+        "name": "Sensitive Access Pattern",
+        "description": "Detects synthetic access behavior involving sensitive areas."
+      }
+    ],
+    "recommended_action": "triage_required",
+    "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
+  },
+  {
+    "alert_id": "alert-6d74f3c2-b5ad-4f8c-a841-59b52b3a1b02",
+    "event_id": "6d74f3c2-b5ad-4f8c-a841-59b52b3a1b02",
+    "timestamp": "2026-05-06T19:11:00+00:00",
+    "host": "k8s-node-03",
+    "user": "carol.engineering",
+    "source": "kernel-telemetry-sim",
+    "event_type": "unusual_outbound_pattern",
+    "risk_score": 100,
+    "priority": "critical",
+    "matched_rules": [
+      {
+        "rule_id": "ZDS-003",
+        "name": "Unusual Outbound Pattern",
+        "description": "Detects synthetic rare outbound communication behavior."
+      }
+    ],
+    "recommended_action": "triage_required",
+    "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
+  },
+  {
+    "alert_id": "alert-e380a5c3-6cd7-4cea-a177-003a16bb462c",
+    "event_id": "e380a5c3-6cd7-4cea-a177-003a16bb462c",
+    "timestamp": "2026-05-06T19:15:00+00:00",
+    "host": "k8s-node-03",
+    "user": "service.backup",
+    "source": "web-api",
+    "event_type": "abnormal_api_frequency",
+    "risk_score": 100,
+    "priority": "critical",
+    "matched_rules": [
+      {
+        "rule_id": "ZDS-006",
+        "name": "Abnormal API Frequency",
+        "description": "Detects synthetic high-frequency API behavior."
+      }
+    ],
+    "recommended_action": "triage_required",
+    "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
+  },
+  {
+    "alert_id": "alert-15b97c12-c86a-4054-9e77-eceb09f8a48a",
+    "event_id": "15b97c12-c86a-4054-9e77-eceb09f8a48a",
+    "timestamp": "2026-05-06T19:17:00+00:00",
+    "host": "build-runner-01",
+    "user": "carol.engineering",
+    "source": "network-sensor-sim",
+    "event_type": "sensitive_file_access_pattern",
+    "risk_score": 91,
+    "priority": "critical",
+    "matched_rules": [
+      {
+        "rule_id": "ZDS-004",
+        "name": "Sensitive Access Pattern",
+        "description": "Detects synthetic access behavior involving sensitive areas."
+      }
+    ],
+    "recommended_action": "triage_required",
+    "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
+  },
+  {
+    "alert_id": "alert-2185a40f-f273-4db3-bd69-63c2cc8169a3",
+    "event_id": "2185a40f-f273-4db3-bd69-63c2cc8169a3",
+    "timestamp": "2026-05-06T19:23:00+00:00",
+    "host": "db-gateway-01",
+    "user": "david.ops",
+    "source": "web-api",
+    "event_type": "auth_failure_burst",
+    "risk_score": 100,
+    "priority": "critical",
+    "matched_rules": [
+      {
+        "rule_id": "ZDS-001",
+        "name": "Authentication Anomaly Burst",
+        "description": "Detects synthetic bursts of failed authentication behavior."
+      }
+    ],
+    "recommended_action": "triage_required",
+    "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
+  },
+  {
+    "alert_id": "alert-c3daa417-6276-4bf9-be69-b13003aff79f",
+    "event_id": "c3daa417-6276-4bf9-be69-b13003aff79f",
+    "timestamp": "2026-05-06T19:26:00+00:00",
+    "host": "linux-api-02",
+    "user": "alice.research",
+    "source": "network-sensor-sim",
+    "event_type": "abnormal_api_frequency",
+    "risk_score": 83,
+    "priority": "high",
+    "matched_rules": [
+      {
+        "rule_id": "ZDS-006",
+        "name": "Abnormal API Frequency",
+        "description": "Detects synthetic high-frequency API behavior."
+      }
+    ],
+    "recommended_action": "triage_required",
+    "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
+  },
+  {
+    "alert_id": "alert-23926f4d-24c5-4189-bc1d-3e3146bb1fa8",
+    "event_id": "23926f4d-24c5-4189-bc1d-3e3146bb1fa8",
+    "timestamp": "2026-05-06T19:38:00+00:00",
+    "host": "db-gateway-01",
+    "user": "bob.admin",
+    "source": "endpoint-agent",
+    "event_type": "sensitive_file_access_pattern",
+    "risk_score": 100,
+    "priority": "critical",
+    "matched_rules": [
+      {
+        "rule_id": "ZDS-004",
+        "name": "Sensitive Access Pattern",
+        "description": "Detects synthetic access behavior involving sensitive areas."
+      }
+    ],
+    "recommended_action": "triage_required",
+    "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
+  },
+  {
+    "alert_id": "alert-6c3fc6bd-e10b-4253-8a23-2610d287b023",
+    "event_id": "6c3fc6bd-e10b-4253-8a23-2610d287b023",
+    "timestamp": "2026-05-06T19:42:00+00:00",
+    "host": "k8s-node-03",
+    "user": "alice.research",
+    "source": "kernel-telemetry-sim",
+    "event_type": "unusual_outbound_pattern",
+    "risk_score": 100,
+    "priority": "critical",
+    "matched_rules": [
+      {
+        "rule_id": "ZDS-003",
+        "name": "Unusual Outbound Pattern",
+        "description": "Detects synthetic rare outbound communication behavior."
+      }
+    ],
+    "recommended_action": "triage_required",
+    "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
+  },
+  {
+    "alert_id": "alert-40ed35c1-12e3-4dff-9cdf-56a4f1c85e29",
+    "event_id": "40ed35c1-12e3-4dff-9cdf-56a4f1c85e29",
+    "timestamp": "2026-05-06T19:47:00+00:00",
+    "host": "k8s-node-03",
+    "user": "alice.research",
+    "source": "auth-service",
+    "event_type": "rare_admin_action",
+    "risk_score": 87,
+    "priority": "high",
+    "matched_rules": [
+      {
+        "rule_id": "ZDS-005",
+        "name": "Rare Privileged Operation",
+        "description": "Detects synthetic rare administrative activity."
+      }
+    ],
+    "recommended_action": "triage_required",
+    "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
+  },
+  {
+    "alert_id": "alert-ee60e88d-b91b-4fdb-b6c4-56ead65905b9",
+    "event_id": "ee60e88d-b91b-4fdb-b6c4-56ead65905b9",
+    "timestamp": "2026-05-06T19:49:00+00:00",
+    "host": "build-runner-01",
+    "user": "alice.research",
+    "source": "endpoint-agent",
+    "event_type": "abnormal_api_frequency",
+    "risk_score": 86,
+    "priority": "high",
+    "matched_rules": [
+      {
+        "rule_id": "ZDS-006",
+        "name": "Abnormal API Frequency",
+        "description": "Detects synthetic high-frequency API behavior."
+      }
+    ],
+    "recommended_action": "triage_required",
+    "defensive_note": "This alert is based on synthetic telemetry and non-weaponized detection logic."
+  }
+]

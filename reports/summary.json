@@ -1,0 +1,15 @@
+{
+  "project": "ZeroDaySentinel",
+  "dataset": "synthetic-telemetry-v0.2",
+  "total_events": 120,
+  "total_alerts": 25,
+  "alert_rate": 0.2083,
+  "priority_counts": {
+    "medium": 0,
+    "high": 3,
+    "critical": 22
+  },
+  "contains_exploit_code": false,
+  "safe_for_local_demo": true,
+  "next_step": "Review reports/alerts.json and map detections to defensive response playbooks."
+}
