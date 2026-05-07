@@ -1,0 +1,73 @@
+﻿{
+  "project": "ZeroDaySentinel",
+  "version": "v0.4.0-draft",
+  "catalog_type": "defensive_detection_rules",
+  "safety_boundary": {
+    "contains_exploit_code": false,
+    "contains_payloads": false,
+    "contains_bypass_steps": false,
+    "defensive_only": true
+  },
+  "rules": [
+    {
+      "rule_id": "ZDS-001",
+      "name": "Authentication Anomaly Burst",
+      "severity": "high",
+      "data_source": "synthetic identity telemetry",
+      "defensive_objective": "Detect repeated authentication failure patterns that may require account review.",
+      "triage_hint": "Review user, host, timestamp clustering, and whether the account behavior deviates from the expected baseline.",
+      "response_mapping": "IR-AUTH-001",
+      "safety_boundary": "Synthetic defensive signal only; no credential attack instructions are included."
+    },
+    {
+      "rule_id": "ZDS-002",
+      "name": "Unexpected Execution Context",
+      "severity": "critical",
+      "data_source": "synthetic endpoint telemetry",
+      "defensive_objective": "Identify process-context deviations that may indicate suspicious execution behavior.",
+      "triage_hint": "Review process lineage, user context, host role, and whether the execution path is expected.",
+      "response_mapping": "IR-ENDPOINT-001",
+      "safety_boundary": "No process injection, exploitation, or evasion procedure is provided."
+    },
+    {
+      "rule_id": "ZDS-003",
+      "name": "Unusual Outbound Pattern",
+      "severity": "high",
+      "data_source": "synthetic network telemetry",
+      "defensive_objective": "Detect rare or unusual outbound communication patterns in synthetic telemetry.",
+      "triage_hint": "Review destination rarity, frequency, source host role, and whether the activity matches expected service behavior.",
+      "response_mapping": "IR-NETWORK-001",
+      "safety_boundary": "No scanning, exfiltration, or unauthorized network testing instructions are included."
+    },
+    {
+      "rule_id": "ZDS-004",
+      "name": "Sensitive Access Pattern",
+      "severity": "high",
+      "data_source": "synthetic file access telemetry",
+      "defensive_objective": "Detect access patterns involving sensitive synthetic paths or unusual access sequences.",
+      "triage_hint": "Review user role, host context, accessed resource category, and whether the access is expected.",
+      "response_mapping": "IR-DATA-001",
+      "safety_boundary": "No real sensitive paths, extraction steps, or misuse instructions are included."
+    },
+    {
+      "rule_id": "ZDS-005",
+      "name": "Rare Privileged Operation",
+      "severity": "critical",
+      "data_source": "synthetic administrative telemetry",
+      "defensive_objective": "Detect rare administrative actions that may require privileged activity review.",
+      "triage_hint": "Review whether the action was expected, approved, and consistent with the administrator's normal behavior.",
+      "response_mapping": "IR-PRIV-001",
+      "safety_boundary": "No privilege escalation steps or administrative abuse instructions are included."
+    },
+    {
+      "rule_id": "ZDS-006",
+      "name": "Abnormal API Frequency",
+      "severity": "medium",
+      "data_source": "synthetic application telemetry",
+      "defensive_objective": "Detect abnormal API frequency patterns in synthetic request telemetry.",
+      "triage_hint": "Review request volume, user context, endpoint category, and whether rate behavior matches expected usage.",
+      "response_mapping": "IR-APP-001",
+      "safety_boundary": "No abuse workflow, bypass logic, or unauthorized automation guidance is included."
+    }
+  ]
+}
