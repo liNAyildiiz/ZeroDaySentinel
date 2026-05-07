@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import json
 import unittest
@@ -13,7 +13,7 @@ class DetectionRuleCatalogTest(unittest.TestCase):
     def test_catalog_exists_and_is_valid(self) -> None:
         self.assertTrue(CATALOG_FILE.exists())
 
-        catalog = json.loads(CATALOG_FILE.read_text(encoding="utf-8"))
+        catalog = json.loads(CATALOG_FILE.read_text(encoding="utf-8-sig"))
 
         self.assertEqual(catalog["project"], "ZeroDaySentinel")
         self.assertEqual(catalog["catalog_type"], "defensive_detection_rules")
@@ -22,7 +22,7 @@ class DetectionRuleCatalogTest(unittest.TestCase):
         self.assertEqual(len(catalog["rules"]), 6)
 
     def test_each_rule_has_required_fields(self) -> None:
-        catalog = json.loads(CATALOG_FILE.read_text(encoding="utf-8"))
+        catalog = json.loads(CATALOG_FILE.read_text(encoding="utf-8-sig"))
 
         required_fields = {
             "rule_id",
