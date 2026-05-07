@@ -1,0 +1,53 @@
+{
+  "project": "ZeroDaySentinel",
+  "dataset": "synthetic-telemetry-v0.2",
+  "total_events": 120,
+  "total_alerts": 25,
+  "alert_rate": 0.2083,
+  "priority_counts": {
+    "critical": 22,
+    "high": 3
+  },
+  "top_hosts": {
+    "build-runner-01": 9,
+    "win-endpoint-01": 5,
+    "k8s-node-03": 5,
+    "db-gateway-01": 4,
+    "linux-api-02": 2
+  },
+  "top_users": {
+    "david.ops": 6,
+    "service.backup": 6,
+    "bob.admin": 5,
+    "alice.research": 5,
+    "carol.engineering": 3
+  },
+  "event_type_counts": {
+    "auth_failure_burst": 4,
+    "abnormal_api_frequency": 4,
+    "unusual_outbound_pattern": 7,
+    "rare_admin_action": 3,
+    "sensitive_file_access_pattern": 4,
+    "unexpected_child_process": 3
+  },
+  "rule_hit_counts": {
+    "{'rule_id': 'ZDS-003', 'name': 'Unusual Outbound Pattern', 'description': 'Detects synthetic rare outbound communication behavior.'}": 7,
+    "{'rule_id': 'ZDS-001', 'name': 'Authentication Anomaly Burst', 'description': 'Detects synthetic bursts of failed authentication behavior.'}": 4,
+    "{'rule_id': 'ZDS-006', 'name': 'Abnormal API Frequency', 'description': 'Detects synthetic high-frequency API behavior.'}": 4,
+    "{'rule_id': 'ZDS-004', 'name': 'Sensitive Access Pattern', 'description': 'Detects synthetic access behavior involving sensitive areas.'}": 4,
+    "{'rule_id': 'ZDS-005', 'name': 'Rare Privileged Operation', 'description': 'Detects synthetic rare administrative activity.'}": 3,
+    "{'rule_id': 'ZDS-002', 'name': 'Unexpected Execution Context', 'description': 'Detects synthetic process-tree behavior that deviates from normal baselines.'}": 3
+  },
+  "recommended_action_counts": {
+    "triage_required": 25
+  },
+  "triage_pressure_score": 2.88,
+  "safety": {
+    "synthetic_only": true,
+    "contains_exploit_code": false,
+    "contains_payloads": false,
+    "contains_bypass_or_evasion_guidance": false,
+    "contains_unauthorized_testing_instructions": false
+  },
+  "next_step": "Use this analytics summary to prioritize defensive triage and response mapping."
+}
