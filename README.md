@@ -190,3 +190,8 @@ python sentinel.py --summary
 ```
 
 See `docs/cli.md` for more details.
+
+## Project Tracking
+
+- See `CHANGELOG.md` for version history.
+- See `ROADMAP.md` for planned development.
