@@ -83,7 +83,7 @@ def build_event(event_type: str, suspicious: bool, index: int) -> dict:
         indicators = indicator_map.get(event_type, ["behavioral_anomaly"])
 
     return {
-        "event_id": str(uuid.uuid4()),
+        "event_id": str(uuid.uuid5(uuid.NAMESPACE_DNS, f"{event_type}-{index}-{suspicious}")),
         "timestamp": iso_time(
             datetime(2026, 5, 6, 18, 0, 0, tzinfo=timezone.utc),
             index,
@@ -141,3 +141,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
