@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ZeroDaySentinel Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+    header {
+      padding: 32px;
+      background: #111827;
+      border-bottom: 1px solid #334155;
+    }
+    main {
+      padding: 32px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h1, h2 {
+      margin-top: 0;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .card {
+      background: #111827;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      padding: 20px;
+    }
+    .metric {
+      font-size: 34px;
+      font-weight: 700;
+      margin-top: 8px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+    th, td {
+      border-bottom: 1px solid #334155;
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      color: #93c5fd;
+    }
+    .safe {
+      color: #86efac;
+      font-weight: 700;
+    }
+    .note {
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ZeroDaySentinel Dashboard</h1>
+    <p class="note">Safe local dashboard generated from synthetic defensive telemetry.</p>
+  </header>
+
+  <main>
+    <section class="grid">
+      <div class="card">
+        <h2>Total Events</h2>
+        <div class="metric">120</div>
+      </div>
+      <div class="card">
+        <h2>Total Alerts</h2>
+        <div class="metric">25</div>
+      </div>
+      <div class="card">
+        <h2>Alert Rate</h2>
+        <div class="metric">0.2083</div>
+      </div>
+      <div class="card">
+        <h2>Safety</h2>
+        <div class="metric safe">Defensive</div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Alert Priority Distribution</h2>
+        <table>
+          <thead>
+            <tr><th>Priority</th><th>Count</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>critical</td><td>22</td></tr>
+<tr><td>high</td><td>3</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h2>Event Type Distribution</h2>
+        <table>
+          <thead>
+            <tr><th>Event Type</th><th>Count</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>user_login_success</td><td>23</td></tr>
+<tr><td>package_update_check</td><td>20</td></tr>
+<tr><td>configuration_read</td><td>18</td></tr>
+<tr><td>normal_api_request</td><td>14</td></tr>
+<tr><td>scheduled_backup_completed</td><td>13</td></tr>
+<tr><td>service_health_check</td><td>7</td></tr>
+<tr><td>unusual_outbound_pattern</td><td>7</td></tr>
+<tr><td>auth_failure_burst</td><td>4</td></tr>
+<tr><td>abnormal_api_frequency</td><td>4</td></tr>
+<tr><td>sensitive_file_access_pattern</td><td>4</td></tr>
+<tr><td>rare_admin_action</td><td>3</td></tr>
+<tr><td>unexpected_child_process</td><td>3</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Safety Boundary</h2>
+      <p class="note">
+        This dashboard is generated only from synthetic local telemetry. It does not include exploit code,
+        payloads, bypass techniques, persistence logic, evasion logic, unauthorized testing instructions,
+        or internet-wide scanning tools.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
