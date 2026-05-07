@@ -10,6 +10,13 @@ This page provides a quick map of the ZeroDaySentinel repository.
 | `docs/architecture.md` | Architecture overview of the synthetic telemetry pipeline. |
 | `docs/demo-output.md` | Explanation of generated demo outputs. |
 
+## Dashboard
+
+| Document | Purpose |
+|---|---|
+| `dashboard/README.md` | Local dashboard generation and usage notes. |
+| `dashboard/generate_dashboard.py` | Generates `dashboard/index.html` from synthetic demo outputs. |
+
 ## Detection Engineering
 
 | Document | Purpose |

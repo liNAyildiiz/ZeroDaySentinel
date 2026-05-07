@@ -206,6 +206,32 @@ python sentinel.py --summary
 
 See `docs/cli.md` for more details.
 
+## Dashboard Prototype
+
+ZeroDaySentinel includes a local HTML dashboard for visualizing synthetic defensive telemetry.
+
+Run the demo and generate the dashboard:
+
+```powershell
+python sentinel.py --demo
+python dashboard/generate_dashboard.py
+```
+
+Then open:
+
+```text
+dashboard/index.html
+```
+
+The dashboard shows:
+
+- total synthetic events,
+- total generated alerts,
+- alert rate,
+- alert priority distribution,
+- event type distribution,
+- defensive safety boundary.
+
 ## Project Tracking
 
 - See `CHANGELOG.md` for version history.

@@ -1,6 +1,18 @@
-﻿# Changelog
+# Changelog
 
 All notable changes to ZeroDaySentinel are documented here.
+
+## v0.5.1 — Dashboard Visibility and Usage Notes
+
+### Added
+
+- README dashboard usage section
+- Documentation index links for dashboard usage
+- Clearer dashboard generation instructions
+
+### Changed
+
+- Improved visibility of the local dashboard prototype from the repository homepage
 
 ## v0.3.0 — Automated Tests and CI Validation
 
