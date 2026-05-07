@@ -1,4 +1,4 @@
-﻿# ZeroDaySentinel 🛡️
+# ZeroDaySentinel 🛡️
 
 ZeroDaySentinel is a defensive cybersecurity research project focused on zero-day readiness, detection engineering, threat modeling, synthetic telemetry, incident response, and responsible disclosure workflows.
 
@@ -140,6 +140,21 @@ Generated files:
 - `reports/summary.json`
 
 This demo uses only synthetic telemetry and non-weaponized defensive detection logic.
+
+## Start Here
+
+ZeroDaySentinel is organized as a safe defensive security lab. Useful entry points:
+
+| Area | Link | Purpose |
+|---|---|---|
+| CLI Demo | [`docs/cli.md`](docs/cli.md) | Run the safe local demo with `python sentinel.py --demo`. |
+| Architecture | [`docs/architecture.md`](docs/architecture.md) | Understand the synthetic telemetry and detection pipeline. |
+| Demo Output | [`docs/demo-output.md`](docs/demo-output.md) | Review generated files and expected output. |
+| Detection Rule Catalog | [`detection/rules/catalog.json`](detection/rules/catalog.json) | Explore synthetic defensive detection rules. |
+| Detection Rules Guide | [`detection/rules/README.md`](detection/rules/README.md) | Understand the current rule catalog. |
+| Incident Response Mapping | [`incident-response/playbook-mapping.md`](incident-response/playbook-mapping.md) | Map detections to safe triage actions. |
+| Changelog | [`CHANGELOG.md`](CHANGELOG.md) | Review version history. |
+| Roadmap | [`ROADMAP.md`](ROADMAP.md) | Follow planned development. |
 
 ## Architecture Overview
 
