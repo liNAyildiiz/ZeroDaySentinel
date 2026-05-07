@@ -8,12 +8,17 @@ permissions:
   contents: read
 
 jobs:
-  repository-checks:
+  test:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
 
       - name: Validate repository structure
         run: |
@@ -21,8 +26,19 @@ jobs:
           test -f SECURITY.md
           test -f CONTRIBUTING.md
           test -f LICENSE
+          test -f sentinel.py
           test -d docs
           test -d lab
           test -d detection
           test -d incident-response
           test -d disclosure
+          test -d tests
+
+      - name: Run safe local demo
+        run: |
+          python sentinel.py --demo
+          python sentinel.py --summary
+
+      - name: Run automated tests
+        run: |
+          python -m unittest discover -s tests -p "test_*.py"
