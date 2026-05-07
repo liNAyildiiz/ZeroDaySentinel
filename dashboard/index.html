@@ -18,7 +18,7 @@
     }
     main {
       padding: 32px;
-      max-width: 1100px;
+      max-width: 1200px;
       margin: auto;
     }
     h1, h2 {
@@ -26,7 +26,7 @@
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 16px;
       margin-bottom: 28px;
     }
@@ -41,6 +41,11 @@
       font-weight: 700;
       margin-top: 8px;
     }
+    .metric-small {
+      font-size: 26px;
+      font-weight: 700;
+      margin-top: 8px;
+    }
     table {
       width: 100%;
       border-collapse: collapse;
@@ -50,12 +55,17 @@
       border-bottom: 1px solid #334155;
       padding: 12px;
       text-align: left;
+      vertical-align: top;
     }
     th {
       color: #93c5fd;
     }
     .safe {
       color: #86efac;
+      font-weight: 700;
+    }
+    .warning {
+      color: #facc15;
       font-weight: 700;
     }
     .note {
@@ -67,7 +77,7 @@
 <body>
   <header>
     <h1>ZeroDaySentinel Dashboard</h1>
-    <p class="note">Safe local dashboard generated from synthetic defensive telemetry.</p>
+    <p class="note">Safe local dashboard generated from synthetic defensive telemetry and triage analytics.</p>
   </header>
 
   <main>
@@ -85,6 +95,10 @@
         <div class="metric">0.2083</div>
       </div>
       <div class="card">
+        <h2>Triage Pressure Score</h2>
+        <div class="metric-small warning">2.88</div>
+      </div>
+      <div class="card">
         <h2>Safety</h2>
         <div class="metric safe">Defensive</div>
       </div>
@@ -94,24 +108,17 @@
       <div class="card">
         <h2>Alert Priority Distribution</h2>
         <table>
-          <thead>
-            <tr><th>Priority</th><th>Count</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>critical</td><td>22</td></tr>
-<tr><td>high</td><td>3</td></tr>
-          </tbody>
+          <thead><tr><th>Priority</th><th>Count</th></tr></thead>
+          <tbody><tr><td>critical</td><td>22</td></tr>
+<tr><td>high</td><td>3</td></tr></tbody>
         </table>
       </div>
 
       <div class="card">
         <h2>Event Type Distribution</h2>
         <table>
-          <thead>
-            <tr><th>Event Type</th><th>Count</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>user_login_success</td><td>23</td></tr>
+          <thead><tr><th>Event Type</th><th>Count</th></tr></thead>
+          <tbody><tr><td>user_login_success</td><td>23</td></tr>
 <tr><td>package_update_check</td><td>20</td></tr>
 <tr><td>configuration_read</td><td>18</td></tr>
 <tr><td>normal_api_request</td><td>14</td></tr>
@@ -122,8 +129,56 @@
 <tr><td>abnormal_api_frequency</td><td>4</td></tr>
 <tr><td>sensitive_file_access_pattern</td><td>4</td></tr>
 <tr><td>rare_admin_action</td><td>3</td></tr>
-<tr><td>unexpected_child_process</td><td>3</td></tr>
-          </tbody>
+<tr><td>unexpected_child_process</td><td>3</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Top Hosts</h2>
+        <table>
+          <thead><tr><th>Host</th><th>Alerts</th></tr></thead>
+          <tbody><tr><td>build-runner-01</td><td>9</td></tr>
+<tr><td>win-endpoint-01</td><td>5</td></tr>
+<tr><td>k8s-node-03</td><td>5</td></tr>
+<tr><td>db-gateway-01</td><td>4</td></tr>
+<tr><td>linux-api-02</td><td>2</td></tr></tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h2>Top Users</h2>
+        <table>
+          <thead><tr><th>User</th><th>Alerts</th></tr></thead>
+          <tbody><tr><td>david.ops</td><td>6</td></tr>
+<tr><td>service.backup</td><td>6</td></tr>
+<tr><td>bob.admin</td><td>5</td></tr>
+<tr><td>alice.research</td><td>5</td></tr>
+<tr><td>carol.engineering</td><td>3</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Rule Hit Counts</h2>
+        <table>
+          <thead><tr><th>Rule</th><th>Hits</th></tr></thead>
+          <tbody><tr><td>{'rule_id': 'ZDS-003', 'name': 'Unusual Outbound Pattern', 'description': 'Detects synthetic rare outbound communication behavior.'}</td><td>7</td></tr>
+<tr><td>{'rule_id': 'ZDS-001', 'name': 'Authentication Anomaly Burst', 'description': 'Detects synthetic bursts of failed authentication behavior.'}</td><td>4</td></tr>
+<tr><td>{'rule_id': 'ZDS-006', 'name': 'Abnormal API Frequency', 'description': 'Detects synthetic high-frequency API behavior.'}</td><td>4</td></tr>
+<tr><td>{'rule_id': 'ZDS-004', 'name': 'Sensitive Access Pattern', 'description': 'Detects synthetic access behavior involving sensitive areas.'}</td><td>4</td></tr>
+<tr><td>{'rule_id': 'ZDS-005', 'name': 'Rare Privileged Operation', 'description': 'Detects synthetic rare administrative activity.'}</td><td>3</td></tr>
+<tr><td>{'rule_id': 'ZDS-002', 'name': 'Unexpected Execution Context', 'description': 'Detects synthetic process-tree behavior that deviates from normal baselines.'}</td><td>3</td></tr></tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h2>Recommended Actions</h2>
+        <table>
+          <thead><tr><th>Action</th><th>Count</th></tr></thead>
+          <tbody><tr><td>triage_required</td><td>25</td></tr></tbody>
         </table>
       </div>
     </section>
@@ -131,9 +186,9 @@
     <section class="card">
       <h2>Safety Boundary</h2>
       <p class="note">
-        This dashboard is generated only from synthetic local telemetry. It does not include exploit code,
-        payloads, bypass techniques, persistence logic, evasion logic, unauthorized testing instructions,
-        or internet-wide scanning tools.
+        This dashboard is generated only from synthetic local telemetry and defensive analytics.
+        It does not include exploit code, payloads, bypass techniques, persistence logic,
+        evasion logic, unauthorized testing instructions, or internet-wide scanning tools.
       </p>
     </section>
   </main>

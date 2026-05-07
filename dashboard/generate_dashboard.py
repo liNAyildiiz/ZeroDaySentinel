@@ -9,10 +9,13 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 SUMMARY_FILE = ROOT_DIR / "reports" / "summary.json"
 ALERTS_FILE = ROOT_DIR / "reports" / "alerts.json"
 EVENTS_FILE = ROOT_DIR / "lab" / "sample-logs" / "sample_events.jsonl"
+ANALYTICS_FILE = ROOT_DIR / "reports" / "triage_analytics.json"
 OUTPUT_FILE = ROOT_DIR / "dashboard" / "index.html"
 
 
-def load_json(path: Path):
+def load_json(path: Path, fallback):
+    if not path.exists():
+        return fallback
     return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
@@ -40,7 +43,17 @@ def counter_to_rows(counter: Counter) -> str:
     return "\n".join(rows)
 
 
-def render_dashboard(summary: dict, alerts: list[dict], events: list[dict]) -> str:
+def dict_to_rows(data: dict) -> str:
+    if not data:
+        return "<tr><td>No data</td><td>0</td></tr>"
+
+    rows = []
+    for key, value in data.items():
+        rows.append(f"<tr><td>{key}</td><td>{value}</td></tr>")
+    return "\n".join(rows)
+
+
+def render_dashboard(summary: dict, alerts: list[dict], events: list[dict], analytics: dict) -> str:
     priority_counts = Counter(alert.get("priority", "unknown") for alert in alerts)
     event_type_counts = Counter(event.get("event_type", "unknown") for event in events)
 
@@ -48,8 +61,14 @@ def render_dashboard(summary: dict, alerts: list[dict], events: list[dict]) -> s
     total_alerts = summary.get("total_alerts", 0)
     alert_rate = summary.get("alert_rate", 0)
 
+    triage_pressure_score = analytics.get("triage_pressure_score", "not generated")
+
     priority_rows = counter_to_rows(priority_counts)
     event_type_rows = counter_to_rows(event_type_counts)
+    top_hosts_rows = dict_to_rows(analytics.get("top_hosts", {}))
+    top_users_rows = dict_to_rows(analytics.get("top_users", {}))
+    rule_hit_rows = dict_to_rows(analytics.get("rule_hit_counts", {}))
+    recommended_action_rows = dict_to_rows(analytics.get("recommended_action_counts", {}))
 
     return f"""<!doctype html>
 <html lang="en">
@@ -71,7 +90,7 @@ def render_dashboard(summary: dict, alerts: list[dict], events: list[dict]) -> s
     }}
     main {{
       padding: 32px;
-      max-width: 1100px;
+      max-width: 1200px;
       margin: auto;
     }}
     h1, h2 {{
@@ -79,7 +98,7 @@ def render_dashboard(summary: dict, alerts: list[dict], events: list[dict]) -> s
     }}
     .grid {{
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 16px;
       margin-bottom: 28px;
     }}
@@ -94,6 +113,11 @@ def render_dashboard(summary: dict, alerts: list[dict], events: list[dict]) -> s
       font-weight: 700;
       margin-top: 8px;
     }}
+    .metric-small {{
+      font-size: 26px;
+      font-weight: 700;
+      margin-top: 8px;
+    }}
     table {{
       width: 100%;
       border-collapse: collapse;
@@ -103,12 +127,17 @@ def render_dashboard(summary: dict, alerts: list[dict], events: list[dict]) -> s
       border-bottom: 1px solid #334155;
       padding: 12px;
       text-align: left;
+      vertical-align: top;
     }}
     th {{
       color: #93c5fd;
     }}
     .safe {{
       color: #86efac;
+      font-weight: 700;
+    }}
+    .warning {{
+      color: #facc15;
       font-weight: 700;
     }}
     .note {{
@@ -120,7 +149,7 @@ def render_dashboard(summary: dict, alerts: list[dict], events: list[dict]) -> s
 <body>
   <header>
     <h1>ZeroDaySentinel Dashboard</h1>
-    <p class="note">Safe local dashboard generated from synthetic defensive telemetry.</p>
+    <p class="note">Safe local dashboard generated from synthetic defensive telemetry and triage analytics.</p>
   </header>
 
   <main>
@@ -138,6 +167,10 @@ def render_dashboard(summary: dict, alerts: list[dict], events: list[dict]) -> s
         <div class="metric">{alert_rate}</div>
       </div>
       <div class="card">
+        <h2>Triage Pressure Score</h2>
+        <div class="metric-small warning">{triage_pressure_score}</div>
+      </div>
+      <div class="card">
         <h2>Safety</h2>
         <div class="metric safe">Defensive</div>
       </div>
@@ -147,24 +180,52 @@ def render_dashboard(summary: dict, alerts: list[dict], events: list[dict]) -> s
       <div class="card">
         <h2>Alert Priority Distribution</h2>
         <table>
-          <thead>
-            <tr><th>Priority</th><th>Count</th></tr>
-          </thead>
-          <tbody>
-            {priority_rows}
-          </tbody>
+          <thead><tr><th>Priority</th><th>Count</th></tr></thead>
+          <tbody>{priority_rows}</tbody>
         </table>
       </div>
 
       <div class="card">
         <h2>Event Type Distribution</h2>
         <table>
-          <thead>
-            <tr><th>Event Type</th><th>Count</th></tr>
-          </thead>
-          <tbody>
-            {event_type_rows}
-          </tbody>
+          <thead><tr><th>Event Type</th><th>Count</th></tr></thead>
+          <tbody>{event_type_rows}</tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Top Hosts</h2>
+        <table>
+          <thead><tr><th>Host</th><th>Alerts</th></tr></thead>
+          <tbody>{top_hosts_rows}</tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h2>Top Users</h2>
+        <table>
+          <thead><tr><th>User</th><th>Alerts</th></tr></thead>
+          <tbody>{top_users_rows}</tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Rule Hit Counts</h2>
+        <table>
+          <thead><tr><th>Rule</th><th>Hits</th></tr></thead>
+          <tbody>{rule_hit_rows}</tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h2>Recommended Actions</h2>
+        <table>
+          <thead><tr><th>Action</th><th>Count</th></tr></thead>
+          <tbody>{recommended_action_rows}</tbody>
         </table>
       </div>
     </section>
@@ -172,9 +233,9 @@ def render_dashboard(summary: dict, alerts: list[dict], events: list[dict]) -> s
     <section class="card">
       <h2>Safety Boundary</h2>
       <p class="note">
-        This dashboard is generated only from synthetic local telemetry. It does not include exploit code,
-        payloads, bypass techniques, persistence logic, evasion logic, unauthorized testing instructions,
-        or internet-wide scanning tools.
+        This dashboard is generated only from synthetic local telemetry and defensive analytics.
+        It does not include exploit code, payloads, bypass techniques, persistence logic,
+        evasion logic, unauthorized testing instructions, or internet-wide scanning tools.
       </p>
     </section>
   </main>
@@ -184,12 +245,13 @@ def render_dashboard(summary: dict, alerts: list[dict], events: list[dict]) -> s
 
 
 def main() -> None:
-    summary = load_json(SUMMARY_FILE)
-    alerts = load_json(ALERTS_FILE)
+    summary = load_json(SUMMARY_FILE, {})
+    alerts = load_json(ALERTS_FILE, [])
+    analytics = load_json(ANALYTICS_FILE, {})
     events = load_events(EVENTS_FILE)
 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT_FILE.write_text(render_dashboard(summary, alerts, events), encoding="utf-8")
+    OUTPUT_FILE.write_text(render_dashboard(summary, alerts, events, analytics), encoding="utf-8")
 
     print(f"[ZeroDaySentinel] Dashboard generated: {OUTPUT_FILE}")
 

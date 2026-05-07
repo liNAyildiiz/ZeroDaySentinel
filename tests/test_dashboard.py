@@ -19,6 +19,11 @@ class DashboardGenerationTest(unittest.TestCase):
             check=True,
         )
         subprocess.run(
+            [sys.executable, "analytics/triage_analytics.py"],
+            cwd=ROOT_DIR,
+            check=True,
+        )
+        subprocess.run(
             [sys.executable, "dashboard/generate_dashboard.py"],
             cwd=ROOT_DIR,
             check=True,
@@ -36,6 +41,15 @@ class DashboardGenerationTest(unittest.TestCase):
         self.assertIn("Alert Priority Distribution", content)
         self.assertIn("Event Type Distribution", content)
         self.assertIn("Safety Boundary", content)
+
+    def test_dashboard_contains_analytics_sections(self) -> None:
+        content = DASHBOARD_FILE.read_text(encoding="utf-8-sig")
+
+        self.assertIn("Triage Pressure Score", content)
+        self.assertIn("Top Hosts", content)
+        self.assertIn("Top Users", content)
+        self.assertIn("Rule Hit Counts", content)
+        self.assertIn("Recommended Actions", content)
 
 
 if __name__ == "__main__":
