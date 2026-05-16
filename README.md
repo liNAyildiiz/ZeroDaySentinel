@@ -1,4 +1,4 @@
-﻿# ZeroDaySentinel ğŸ›¡ï¸
+﻿# ZeroDaySentinel
 
 ZeroDaySentinel is a defensive cybersecurity research project focused on zero-day readiness, detection engineering, threat modeling, synthetic telemetry, incident response, and responsible disclosure workflows.
 
