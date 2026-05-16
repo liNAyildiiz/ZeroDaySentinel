@@ -1,4 +1,4 @@
-# ZeroDaySentinel Documentation Index
+﻿# ZeroDaySentinel Documentation Index
 
 This page provides a quick map of the ZeroDaySentinel repository.
 
@@ -35,3 +35,8 @@ This page provides a quick map of the ZeroDaySentinel repository.
 ## Safety Boundary
 
 ZeroDaySentinel is defensive, synthetic, and non-weaponized. It does not include exploit code, payloads, bypass techniques, persistence logic, evasion logic, unauthorized testing instructions, or internet-wide scanning tools.
+
+## Stable Release
+
+- [ZeroDaySentinel v1.0.0 Stable Release Notes](stable-release.md)
+

@@ -1,4 +1,4 @@
-# ZeroDaySentinel 🛡️
+﻿# ZeroDaySentinel ğŸ›¡ï¸
 
 ZeroDaySentinel is a defensive cybersecurity research project focused on zero-day readiness, detection engineering, threat modeling, synthetic telemetry, incident response, and responsible disclosure workflows.
 
@@ -80,7 +80,7 @@ This project is intended only for defensive education, authorized research, and 
 
 ## Roadmap
 
-### v0.1 — Repository Foundation
+### v0.1 â€” Repository Foundation
 
 - README
 - SECURITY.md
@@ -89,27 +89,27 @@ This project is intended only for defensive education, authorized research, and 
 - project structure
 - initial CI workflow
 
-### v0.2 — Synthetic Telemetry Lab
+### v0.2 â€” Synthetic Telemetry Lab
 
 - synthetic normal logs
 - synthetic suspicious logs
 - safe log generator
 - local detector prototype
 
-### v0.3 — Detection Engineering
+### v0.3 â€” Detection Engineering
 
 - Sigma-style rules
 - YARA-style rules
 - IOC examples
 - MITRE ATT&CK mapping
 
-### v0.4 — Response and Disclosure
+### v0.4 â€” Response and Disclosure
 
 - incident response playbooks
 - responsible disclosure templates
 - sample zero-day readiness report
 
-### v0.5 — Dashboard Prototype
+### v0.5 â€” Dashboard Prototype
 
 - local dashboard
 - anomaly timeline
@@ -161,10 +161,10 @@ ZeroDaySentinel is organized as a safe defensive security lab. Useful entry poin
 ZeroDaySentinel is organized as a defensive detection lab. The current prototype follows a safe synthetic telemetry pipeline:
 
 Synthetic Event Generator
-→ sample_events.jsonl
-→ Defensive Detector
-→ Risk Scoring and Rule Matching
-→ alerts.json and summary.json
+â†’ sample_events.jsonl
+â†’ Defensive Detector
+â†’ Risk Scoring and Rule Matching
+â†’ alerts.json and summary.json
 
 The project intentionally avoids exploit development. It focuses on how defenders can reason about unknown or undisclosed threats using telemetry, detection logic, response playbooks, and responsible disclosure workflows.
 
@@ -236,3 +236,12 @@ The dashboard shows:
 
 - See `CHANGELOG.md` for version history.
 - See `ROADMAP.md` for planned development.
+
+## Stable v1.0.0 Workflow
+
+ZeroDaySentinel now includes a complete stable defensive lab workflow.
+
+See the full stable release workflow here:
+
+- [Stable Release Notes](docs/stable-release.md)
+
